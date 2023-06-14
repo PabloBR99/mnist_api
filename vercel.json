@@ -8,7 +8,7 @@
      "routes": [
          {
              "src": "/(.*)",
-             "dest": "mnist_api/main.py"
+             "dest": "/"
          }
      ]
  }
