@@ -1,0 +1,14 @@
+ {
+     "builds": [
+         {
+             "src": "mnist_project_api/main.py",
+             "use": "@vercel/python"
+         }
+     ],
+     "routes": [
+         {
+             "src": "/(.*)",
+             "dest": "mnist_project_api/main.py"
+         }
+     ]
+ }
