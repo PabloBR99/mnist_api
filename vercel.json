@@ -1,7 +1,7 @@
  {
      "builds": [
          {
-             "src": "mnist_api/main.py",
+             "src": "./main.py",
              "use": "@vercel/python"
          }
      ],
