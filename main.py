@@ -3,7 +3,6 @@
 import numpy as np
 from flask import Flask, request, Response, abort
 # from joblib import dump, load
-from flask_cors import CORS
 import pandas as pd
 from tensorflow import keras
 import json
