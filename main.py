@@ -3,7 +3,6 @@
 import numpy as np
 from flask import Flask, request, Response, abort
 # from joblib import dump, load
-import pandas as pd
 from tensorflow import keras
 import json
 
@@ -15,7 +14,7 @@ model = keras.models.load_model('src\model')
 @application.post('/predict')
 def predict():
     req = request.get_json()['pixels']
-    pixels = pd.DataFrame(req).values.reshape(1, 28, 28, 1)
+    pixels = np.reshape(req, (1, 28, 28, 1))
     if pixels is None:
        abort(400)
     prediction = model.predict([pixels])
