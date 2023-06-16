@@ -1,17 +1,15 @@
 #!/usr/bin/python3
-# import cv2
 import numpy as np
 from flask import Flask, request, Response, abort
-# from joblib import dump, load
 from tensorflow import keras
 import json
 
-application = Flask(__name__)
+app = Flask(__name__)
 # Load mnist model
-model = keras.models.load_model('src\model')
+model = keras.models.load_model('model')
 
 # /predict endpoint
-@application.post('/predict')
+@app.post('/predict')
 def predict():
     req = request.get_json()['pixels']
     pixels = np.reshape(req, (1, 28, 28, 1))
@@ -24,5 +22,5 @@ def predict():
 
 # Run the app
 if __name__ == "__main__":
- application.debug = True
- application.run(host="0.0.0.0")
+ app.debug = True
+ app.run(host="0.0.0.0")
