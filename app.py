@@ -57,7 +57,7 @@ def center_image(img):
     left = one_axis_fill / 2
     right = one_axis_fill - left
 
-    padded_image = pad_image(int(cropped_image), int(top), int(left), int(bottom), int(right))
+    padded_image = pad_image(cropped_image, int(top), int(left), int(bottom), int(right))
 
     return padded_image
 
