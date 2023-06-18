@@ -66,7 +66,7 @@ model = keras.models.load_model('model')
 @app.post('/predict')
 def predict():
     req = request.get_json()['pixels']
-    pixels_c = center_image(np.reshape(req, (28, 28))
+    pixels_c = center_image(np.reshape(req, (28, 28)))
     pixels = np.reshape(pixels_c, (1, 28, 28, 1))
     if pixels is None:
        abort(400)
