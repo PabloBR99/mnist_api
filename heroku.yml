@@ -1,0 +1,2 @@
+run:
+  web: gunicorn 0.0.0.0 -b :8080 app:app
