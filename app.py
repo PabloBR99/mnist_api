@@ -45,8 +45,8 @@ def center_image(img):
 
     cropped_image = img[y1:y2, x1:x2]
 
-    zero_axis_fill = (images[0].shape[0] - cropped_image.shape[0])
-    one_axis_fill = (images[0].shape[1] - cropped_image.shape[1])
+    zero_axis_fill = (img.shape[0] - cropped_image.shape[0])
+    one_axis_fill = (img.shape[1] - cropped_image.shape[1])
 
     top = zero_axis_fill / 2
     bottom = zero_axis_fill - top
