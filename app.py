@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 import numpy as np
 from flask import Flask, request, Response, abort
+from flask_cors import CORS
 from tensorflow import keras
 import json
 
 app = Flask(__name__)
+CORS(app)
 # Load mnist model
 model = keras.models.load_model('model')
 
