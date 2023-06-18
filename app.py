@@ -6,7 +6,8 @@ from tensorflow import keras
 import json
 import scipy as sp
 
-def recenter(arr):
+def recenter(arr2):
+    arr = cv2.copyMakeBorder(arr2, 10, 10, 10, 10, cv2.BORDER_REPLICATE)
     slicing = sp.ndimage.find_objects(arr != 0, max_label=1)[0]
     center_slicing = tuple(
         slice((dim - sl.stop + sl.start) // 2, (dim + sl.stop - sl.start) // 2)
