@@ -59,7 +59,7 @@ def center_image(img):
 
     padded_image = pad_image(cropped_image, int(top), int(left), int(bottom), int(right))
 
-    return padded_image
+    return padded_image.reshape((28 * 28))
 
 app = Flask(__name__)
 CORS(app)
