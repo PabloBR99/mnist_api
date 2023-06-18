@@ -21,7 +21,7 @@ def pad_image(img, pad_t, pad_r, pad_b, pad_l):
     width = int(width)
 
     # Adding padding to the left side.
-    pad_left = np.zeros((int(height), pad_l), dtype = np.int)
+    pad_left = np.zeros(height, pad_l), dtype = np.int)
     img = np.concatenate((pad_left, img), axis = 1)
 
     # Adding padding to the top.
