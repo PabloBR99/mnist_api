@@ -25,7 +25,7 @@ model = keras.models.load_model('model')
 def predict():
     req = request.get_json()['pixels']
     # pixels_c = recenter(np.reshape(req, (28, 28)))
-    pixels_c = recenter(req)
+    pixels_c = recenter(np.array(req))
     pixels = np.reshape(pixels_c, (1, 28, 28, 1))
     if pixels is None:
        abort(400)
