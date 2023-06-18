@@ -5,6 +5,7 @@ from flask_cors import CORS
 from tensorflow import keras
 import json
 import scipy as sp
+import cv2
 
 def recenter(arr2):
     arr = cv2.copyMakeBorder(arr2, 10, 10, 10, 10, cv2.BORDER_REPLICATE)
