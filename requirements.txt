@@ -3,4 +3,3 @@ flask_cors
 tensorflow-cpu
 numpy
 gunicorn
-opencv-python-headless
