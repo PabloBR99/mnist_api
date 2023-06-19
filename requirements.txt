@@ -3,4 +3,4 @@ flask_cors
 tensorflow-cpu
 numpy
 gunicorn
-cv2
+opencv-python
