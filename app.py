@@ -72,7 +72,7 @@ def predict():
     req = request.get_json()['pixels']
     # pixels_c = recenter(np.reshape(req, (28, 28)))
     pixels = np.array(req)
-    pixels_f = np.reshape(pixels_f, (1, 28, 28, 1))
+    pixels_f = np.reshape(pixels, (1, 28, 28, 1))
     # pixels_f = clipped_zoom(pixels_c, 1.1)
     if pixels_f is None:
        abort(400)
